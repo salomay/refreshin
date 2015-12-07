@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/$ index.php?act=$1&p_id=$2&sub=$3&step=$4&cat=$5&status=$6&tab=$7&octa=$8 [L]
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/$ index.php?act=$1&p_id=$2&sub=$3&step=$4&cat=$5&status=$6&tab=$7 [L]
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/$ index.php?act=$1&p_id=$2&sub=$3&step=$4&cat=$5&status=$6 [L]
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/(.*)/$ index.php?act=$1&p_id=$2&sub=$3&step=$4&cat=$5 [L]
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/$ index.php?act=$1&p_id=$2&sub=$3&step=$4 [L]
+RewriteRule ^(.*)/(.*)/(.*)/$ index.php?act=$1&p_id=$2&sub=$3 [L]
+RewriteRule ^(.*)/(.*)/$ index.php?act=$1&p_id=$2 [L]
+RewriteRule ^(.*)/$ index.php?act=$1 [L]
+</IfModule>
