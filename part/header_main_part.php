@@ -7,75 +7,7 @@ $urlx = new url();
 				<div class="search_box">
 					<input type="text" id="katakunci" placeholder="Search your destination...">
 					<input type="submit" id="cari_search" value="">
-					<input type="button" value="Advance Search" class="advance_search">
-					<div class="arrow_search">▼</div>
 				</div>
-				<div class="advanced_search">
-					<form action="">
-						<div class="add_fix">
-							<span>Keyword</span><i>:</i><input type="text">
-						</div>
-						<div class="add_fix">
-							<span>Negara</span><i>:</i>
-							<Select>
-								<option>Pilih Negara</option>
-								<option>Indonesia</option>
-							</select>
-						</div>
-						<div class="add_fix">
-							<span>Provinsi</span><i>:</i>
-							<Select>
-								<option>Pilih Provinsi</option>
-								<option>Jawa Timur</option>
-							</select>
-						</div>
-						<div class="add_fix">
-							<span>Kota</span><i>:</i>
-							<Select>
-								<option>Pilih Kota</option>
-								<option>Surabaya</option>
-							</select>
-						</div>
-						<div class="add_fix">
-							<span>Type</span><i>:</i>
-							<input type="radio" name="btnevent"  value="" checked="checked"/>&nbsp;<label id="btnevent">Event</label>
-							<input type="radio" name="btndestinasi"  value=""/>&nbsp;<label id="btnevent">Destinasi</label>
-						</div>
-						<div class="add_fix">
-							<span>&nbsp;</span><i>&nbsp;</i>
-							<input type="checkbox" name="checkarticle" value="article">&nbsp;<label id="checkarticle">Article</label>&nbsp;&nbsp;&nbsp;
-							<input type="checkbox" name="checkevent" value="event">&nbsp;<label id="checkevent">Event</label>&nbsp;&nbsp;&nbsp;
-							<input type="checkbox" name="checknews" value="news">&nbsp;<label id="checknews">News</label>&nbsp;&nbsp;&nbsp;
-							<input type="checkbox" name="checktrip" value="trip">&nbsp;<label id="checktrip">Trip</label>&nbsp;&nbsp;&nbsp;
-							<input type="checkbox" name="checkstore" value="store">&nbsp;<label id="checktrip">Store</label>
-						</div>
-						<div class="add_fix">
-							<span>Kategori</span><i>:</i>
-							<input style="top:3px;" type="checkbox" name="checksejarah" value="sejarah">&nbsp;<label id="checksejarah" style="top:2px;">Article</label>&nbsp;&nbsp;&nbsp;
-							<input style="top:3px;" type="checkbox" name="checkpetualangan" value="petualangan">&nbsp;<label id="checkevent" style="top:2px;">Petualangan</label>&nbsp;&nbsp;&nbsp;
-						</div>
-						<div class="add_fix advanced_date">
-							<span>Date</span><i>:</i>
-							<span style="width:auto; margin-left:3px;">Start</span>
-							<Select>
-								<option>Pilih Kota</option>
-								<option>Surabaya</option>
-							</select>
-							<span style="width:auto; margin-left:10px;">End</span>
-							<Select>
-								<option>Pilih Kota</option>
-								<option>Surabaya</option>
-							</select>
-							<br />
-							<input type="checkbox" name="checkexactdate" value="exactdate" style="top:-5px; margin-left:10px;">&nbsp;<label style="top:-7px;" id="checkexactdate">Exact Date</label>&nbsp;&nbsp;&nbsp;
-						</div>
-						<div class="add_fix">
-							<input type="submit" value="SUBMIT">
-							<input type="reset" value="RESET">
-						</div>
-					</form>
-				</div>
-				
 				<div id="hasilcari"></div>
 				<a href="<?php echo $app["www"]."/".$dbu->lookup('nama','action',"action='23' and id_bahasa='".$_SESSION[bhs]."'")."/";?>" class="nearby_link"><span>Nearby Place</span></a>
 				<?php
