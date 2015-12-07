@@ -1,0 +1,197 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700)
+
+*
+	box-sizing: border-box
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	-o-box-sizing: border-box
+	margin: 0
+	padding: 0
+	html
+		.clearfix
+			height: 1%
+
+
+body
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif
+
+#header
+	background-color: #3AAD0C
+	height: 50px
+	margin : 0 auto
+	width: 100%
+
+.logo
+	margin-left: 15px
+	margin-top: 10px
+	float: left
+	a
+		color: #fff
+		font-size: 1.3em
+		text-decoration: none
+		span
+			color: orange
+			font-weight: 300
+			
+#container
+	margin: 0 auto
+	width: 100%
+
+.clearfix
+	display:inline-block
+	&:after
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+
+
+.sidebar
+	background-color: #319409
+	float: left
+	height: 100%
+	width: 250px
+
+.content
+	background-color: #E1F7C8
+	height: 100%
+	margin-left: 250px
+	padding : 15px
+	p
+		color: #424242
+		font-size: 0.73em
+
+#nav
+	ul
+		list-style: none
+		padding: 0
+		margin: 0
+	li
+		font-size: 0.8em
+		ul
+			display:none
+			width: inherit
+			background-color: #B4F573
+			li
+				display: block
+				.active
+					background-color: #548C1C
+					color: #fff
+		li
+			font-size: 0.8em
+			a
+				margin-left:15px				
+				color: #000
+				display: block		
+				padding: 10px
+				text-decoration: none
+				-webkit-transition: 0.2s
+				-moz-transition: 0.2s
+				-o-transition: 0.2s
+				transition: 0.2s
+		&:hover
+			background-color: #67B31B
+			color: #fff
+			ul
+				display: block
+	a
+		border-bottom: 1px solid #D9FFB3
+		color: #fff
+		display: block		
+		padding: 10px
+		text-decoration: none
+		-webkit-transition: 0.2s
+		-moz-transition: 0.2s
+		-o-transition: 0.2s
+		transition: 0.2s
+		&:hover
+			background-color: #4B8C06
+			color: #fff
+		&:active
+			background-color: #76DB09
+					
+	.active
+			background-color: #95E874
+			color: #000
+			cursor: default
+
+.box
+	margin-top:15px	
+	.box-top
+		background-color: #2980b9
+		color: #fff
+		font-size: 15px
+		font-weight: bold
+		text-shadow: 0px 0px 1px #ddd
+		padding: 10px
+	.box-alert
+		background-color: #FA1115
+		color: #fff
+		font-size: 15px
+		font-weight: bold
+		text-shadow: 0px 0px 1px #ddd
+		padding: 10px
+	.box-warning
+		background-color: #FA8611
+		color: #fff
+		font-size: 15px
+		font-weight: bold
+		text-shadow: 0px 0px 1px #ddd
+		padding: 10px
+	.box-success
+		background-color: #60F50A
+		color: #fff
+		font-size: 15px
+		font-weight: bold
+		text-shadow: 0px 0px 1px #ddd
+		padding: 10px
+	.box-info
+		background-color: #2980b9
+		color: #fff
+		font-size: 15px
+		font-weight: bold
+		text-shadow: 0px 0px 1px #ddd
+		padding: 10px
+	.box-danger
+		background-color: #FF1E00
+		color: #fff
+		font-size: 15px
+		font-weight: bold
+		text-shadow: 0px 0px 1px #ddd
+		padding: 10px
+	.box-content
+		background-color: #E1FCD2
+		color: #000
+		font-size: 15px
+		font-weight: bold
+		text-shadow: 0px 0px 1px #ddd
+		padding: 10px
+		p
+			font-size: 12px	
+.table_filter
+	width:100%
+	margin: 5px 0
+	display: block
+	position: relative
+.ion-arrow-down-b
+	color: black
+.ion-arrow-up-b
+	color: black
+a
+	text-decoration: none
+	color: #a7c942
+	&:hover
+		cursor: pointer
+		color: #305C01
+.ion-information-circled
+	color: #fff
+	font-size: 25px
+
+.viewedx
+	background-color:#DCEAFA
+	padding: 5px
+
+.footer
+	padding: 10px 5px 0
+	background-color : #F5FCC7

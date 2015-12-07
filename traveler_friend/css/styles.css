@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.splash {
+	height: 100vh;
+	background-size:cover;
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+	align-items:center;
+	background-image:url("http://localhost/reff/point_of_view/cms_bg/bg_1.jpg");
+	}
+
+
+
+#judul_cms{
+	/* width: 300px;  */
+	color: #FFF;
+	padding: 5px;
+	border-radius:5px;
+	font-weight:bold;
+	display:block;
+}
+
+
+#form-div {
+	background-color:rgba(3,135,126,0.4);
+	padding:0px 35px 35px 35px;
+	/* float: left; */
+	border-radius:8px;
+}
+
+.input{
+	padding: 10px;
+	border: none;
+	border-bottom: solid 2px #c9c9c9;
+	border-radius: 2px;
+	transition: border 0.3s;
+	width:100%
+}

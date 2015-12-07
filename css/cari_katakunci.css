@@ -1,0 +1,40 @@
+#hasilcari{
+	background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid;
+    border-radius: 5px;
+    color: #000;
+    display: none;
+    /*padding: 10px;*/
+    position: absolute;
+    top: 110%;
+    width: 50%;
+}
+#hasilcari li{
+    cursor: pointer;
+    padding: 8px;
+}
+
+#hasilcari li:hover{
+	background-color: #1457C9;
+}
+
+#topiknya{
+     background-color: rgba(255, 255, 255, 0.82);
+    border: 1px solid;
+    border-radius: 5px;
+    color: #000;
+    display: none;
+    margin-bottom: 10px;
+    padding: 5px;
+    position: absolute;
+    width: 90%;
+    z-index: 10;
+}
+#topiknya li{
+    cursor: pointer;
+    padding: 8px;
+}
+
+#topiknya li:hover{
+    background-color: #1457C9;
+}

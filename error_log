@@ -1,0 +1,3 @@
+[21-Nov-2015 10:06:21 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/refresh2/public_html/fill/fill_destinasi.php on line 55
+[24-Nov-2015 12:13:12 Asia/Jakarta] PHP Catchable fatal error:  Object of class mysqli_result could not be converted to string in /home/refresh2/public_html/fill/fill_destinasi_kat.php on line 28
+[30-Nov-2015 17:46:02 Asia/Jakarta] PHP Parse error:  syntax error, unexpected end of file in /home/refresh2/public_html/fill/fill_destinasi_kat.php on line 141
