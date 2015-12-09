@@ -14,7 +14,7 @@ $urlx = new url();
 				<div class="search_destination">
 					<h1><?php
 					$kat = '%'.str_replace("-","%",$app[p_id])."%";
-							echo "KATEGORI ".$app[p_id];
+							echo "KATEGORI ".str_replace("-"," ",$app[p_id]);
 					// echo $dbu->lookup('kategori','destinasi_kategori',"id='".$app[p_id]."'") 
 					?>
                     <span class="border"></span></h1>

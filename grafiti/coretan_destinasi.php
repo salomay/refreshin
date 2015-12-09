@@ -7,6 +7,7 @@ $app['nopage'] = $rs_act["action"];
 $outnya ="";
 $awal = 0; $jml = 8 ; $limit = 8; $lm = true;
 
+
 function tujuanDes($destkota,$stat='provinsi',$tambah){
 	global $app;
 	$dbu = new db();
@@ -76,6 +77,9 @@ if($rs_act["action"] == 'desfilter'){
 	$p_kota = $_POST[p_kota];
 	$p_kate = $_POST[p_kategori];
 	//echo $p_negara;exit;
+	$lokasi= $app[http]."/".$dbu->lookup('nama','action',"action='2' and id_bahasa='".$_SESSION[bhs]."'")."/id_".$dbu->lookup("nama","kota","id = '".$p_kota."'")."_".$urlx->shortLink($dbu->lookup("nama","provinsi","id = '".$p_provinsi."'"))."/";
+	header('location:'.$lokasi);
+	
 	$tambah ="";
 	if($p_negara !=""){
 		if($p_provinsi !=""){
@@ -138,6 +142,7 @@ if($rs_act["action"] == 'desfilter'){
 		header("location:".$tujuan);
 	}
 }elseif(!$p_id){
+
 	$sql = "SELECT id, nama FROM ".$app[table][provinsi]." WHERE id_negara ='1' ORDER BY nama LIMIT ".$awal.",".$limit;
 	//echo $sql;
 	$dbu->query($sql,$rsprov,$nrprov);

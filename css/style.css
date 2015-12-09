@@ -675,6 +675,7 @@ body{position:relative;width:100%;height:100%;line-height:1;margin:0;padding:0;b
 			.register-boxed .con_login a, .input-destinasi a {font-size:11px;color:#10928a;}
 			
 			.input-destinasi {position:relative;margin-top:0px;}
+			.input-destinasi:focus {outline: none; border-color: blue;box-shadow: 0 0 10px blue;}
 			.input-destinasi input[type="text"] {width:96%;height:38px;border:1px solid #c7c7c7;margin-bottom:12px;padding:0 2%;}
 			.input-destinasi textarea {font-family:"open_sansregular";width:96%;max-width:96%;height:38px;border:1px solid #c7c7c7;margin-bottom:12px;padding:1% 2%;font-size:13px;}
 			.input-destinasi select {width:100%;height:38px;border:1px solid #c7c7c7;margin-bottom:12px;padding:0 2%;}

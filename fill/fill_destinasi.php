@@ -7,12 +7,11 @@ $dbu = new db();
 $appx = new app();
 $urlx = new url();
 $pid = explode("_",$p_id);
+
+
 					
 	if($pid[1] != null){
 		echo "<body onload='load_destinasi()'>";	
-		if($_POST[p_kota] != null){
-			
-		}
 		$idkota = $dbu->lookup("id","kota","nama LIKE '".str_replace("-", "%", $pid[1])."'");	
 	}else{
 		echo "<body onload='load_city()'>";
@@ -30,16 +29,16 @@ $pid = explode("_",$p_id);
 			<div class="content add_fix">
 				<div class="search_destination">
 				<div id="gg_loc"></div>
-					<h1>SEARCH DESTINATION<span class="border"></span></h1>
+					<h1>SEARCH DESTINATION <span class="border"></span></h1>
 					<div class="boxcon_search_destination add_fix">
-						<div class="map_search" id="google_map"></div>
+						<div class="map_search" id="google_map" style="line-height:1.35;overflow:hidden;white-space:nowrap;"></div>
 						<div class="sort_by">
 							<span>SORT BY</span>
 							<div class="sort_form">
 								<form method="post" enctype="multipart/form-data">
 									<label class="custom-select">
-										<select name ="p_negara" id ="p_negara" style="margin-top:22px;">
-											<option value="">country</option>
+										<select name ="p_negara" id ="p_negara" style="margin-top:22px;" class="input-destinasi">
+											<option value="">Pilih Negara</option>
 											<option value="1">Indonesia</option>
 											<?php //while($negara = $dbu->fetch($rsnegara)){ ?>
 											<!--<option value="<?php echo $negara[id]; ?>"><?php echo $negara[nama]; ?></option>-->
@@ -48,18 +47,18 @@ $pid = explode("_",$p_id);
 									</label>
 									<label class="custom-select">
 										
-										<select name ="p_provinsi" id ="p_provinsi" >
-											<option value="">province</option>
+										<select name ="p_provinsi" id ="p_provinsi" class="input-destinasi">
+											<option value="">Pilih Provinsi</option>
 										</select>
 									</label>
 									<label class="custom-select">
-										<select name ="p_kota" id ="p_kota">
-											<option value="">city</option>
+										<select name ="p_kota" id ="p_kota" class="input-destinasi">
+											<option value="">Pilih Kota</option>
 										</select>
 									</label>
 									<label class="custom-select">
-										<select name ="p_kategori" id ="p_kategori">
-											<option value="">category</option>
+										<select name ="p_kategori" id ="p_kategori" class="input-destinasi">
+											<option value="">Pilih Kategori</option>
 											<?php 
 											$rskat = $dbu->get_recordset($app[table][destinasi_kategori],"status ='aktif'");
 											while($kategori = $dbu->fetch($rskat)){ ?>
@@ -69,7 +68,7 @@ $pid = explode("_",$p_id);
 									</label>
 									<input type="hidden" name="act">
 									<input type="hidden" name="referer" value="<?php echo  $urlx->get_referer(); ?>">	
-									<input type="button"  class="begin_filter" value="Begin Filter" id="b_filter" onClick="set_valid(this,'desfilter')" />
+									<input type="button"  class="begin_filter" value="Begin Filter" id="b_filter" onClick="valid(this,'desfilter')" />
 								</form>
 							</div>
 						</div>
@@ -89,6 +88,8 @@ $pid = explode("_",$p_id);
 
 	<script type="text/javascript">
  
+
+
     var lat_kota=<?php echo json_encode($select_lat); ?>;
     var long_kota=<?php echo json_encode($select_long); ?>;
 
@@ -121,12 +122,23 @@ var customIcons = {
     };
 
  
-function set_valid(param, act){
+function valid(param, act){
 		
-		if($('#p_kota').val()=="")
-		{
+		if($('#p_negara').val()=="" ){
+			alert("Please Choose Country")
+			$('#p_negara').focus();
+			$(window).scrollTop(0);
+
+		}else if($('#p_provinsi').val()==""){
+			alert("Please Choose ")
+			$('#p_provinsi').focus();
+			$(window).scrollTop(0);
+
+		}else if($('#p_kota').val()==""){
 			alert("Harap Pilih Kota")
 			$('#p_kota').focus();
+			$(window).scrollTop(0);
+
 		}else{
 			var param = param;
 			param.form.act.value = act;
@@ -161,7 +173,7 @@ function set_valid(param, act){
           var point = new google.maps.LatLng(
               parseFloat(markers[i].getAttribute("lat")),
               parseFloat(markers[i].getAttribute("lng")));
-          var html = "<center><h1>" + name + "</h1></center><p>" + deskripsi;
+          var html = "<div style='overflow:hidden; width:150px; height:200px;'><center><h1>" + name + "</h1></center><p>" + deskripsi +"</div>";
           //var icon = customIcons[kategori] || {};
           var marker = new google.maps.Marker({
             map: map,
@@ -182,7 +194,7 @@ function set_valid(param, act){
         zoom: 10,
         mapTypeId: 'roadmap'
       });
-      var infoWindow = new google.maps.InfoWindow;
+      var infoWindow = new google.maps.InfoWindow({content: '<div">ADD CONTENT</div>'});
  
   
       // Bagian ini digunakan untuk mendapatkan data format XML yang dibentuk dalam dataLokasi.php
