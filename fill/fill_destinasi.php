@@ -168,12 +168,13 @@ function valid(param, act){
         for (var i = 0; i < markers.length; i++) {
           var name = markers[i].getAttribute("name");
           var deskripsi = markers[i].getAttribute("deskripsi");
+          var button = markers[i].getAttribute("button");
           lat_kota=markers[i].getAttribute("lat");
           long_kota=markers[i].getAttribute("lng");
           var point = new google.maps.LatLng(
               parseFloat(markers[i].getAttribute("lat")),
               parseFloat(markers[i].getAttribute("lng")));
-          var html = "<div style='overflow:hidden; width:150px; height:200px;'><center><h1>" + name + "</h1></center><p>" + deskripsi +"</div>";
+          var html = "<a href='"+button+"'><div style='overflow:hidden; width:150px; height:150px;'><center><h1>" + name + "</h1></center><p style='word-wrap: break-word; white-space: -moz-pre-wrap; white-space: pre-wrap; text-align:justify; '>" + deskripsi +" <div class='explore'>EXPLORE MORE</div></div></a>";
           //var icon = customIcons[kategori] || {};
           var marker = new google.maps.Marker({
             map: map,
@@ -209,7 +210,7 @@ function valid(param, act){
           var point = new google.maps.LatLng(
               parseFloat(markers[i].getAttribute("lat")),
               parseFloat(markers[i].getAttribute("lng")));
-          var html = "<div style='overflow:hidden;'><center><b><h3>" + name + "</h3></b></center><br><image width='200px' height='200px' src='"+ gambar +"'/><a href='"+button+"'><div class='explore'>EXPLORE MORE</div></a> </div>";
+          var html = "<div style='overflow:hidden; width:150px; height:150px;'><center><b style='color: #085f7d;font-size: 12px;text-transform: uppercase;  font-family: open_sansbold; word-wrap: break-word; white-space: -moz-pre-wrap; white-space: pre-wrap;'>" + name + "</b></center><br><a href='"+button+"'><image width='150px' height='120px' src='"+ gambar +"'/></a> </div>";
           var icon = customIcons[kategori] || {};
           var marker = new google.maps.Marker({
             map: map,

@@ -20,7 +20,6 @@ function tujuanDes($destkota,$stat='provinsi',$tambah){
 		$desty[thumb] = $app[data_www]."/destinasi/thumb/".$desty[thumb];
 			$outnya .= '<li>
 							<div class="img_box">
-
 								<img src="'.$desty[thumb].'">
 							</div>
 							<div class="text">
