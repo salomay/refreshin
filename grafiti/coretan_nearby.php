@@ -20,3 +20,4 @@ $rkat = $dbu->get_recordset($app[table][destinasi_kategori], " status = 'aktif' 
 //echo $pid; exit;
 include "fill/fill_nearby.php"; 
 ?>
+ 

@@ -6,12 +6,11 @@ $dbu->connect();
  $appx->load_lib('url');
 $uly = new url();
 //Get our locations from the database.
-$radius = 10000;
+$radius = 20;
 // Search the rows in the markers table
 $kat ="";
 if($_POST[kate]!=""){
-	$kat = '%'.str_replace("-","%",$_POST[kate])."%";
-	$kat = " WHERE a.id_kat = '".$dbu->lookup("id",$app[table][destinasi_kategori],"kategori LIKE '%".$kat."%'")."'";
+	$kat = "WHERE a.id_kat ='".$_POST[kate]."'";
 }
 
 $lat = $_POST[lat];
@@ -19,7 +18,7 @@ $lng = $_POST[lng];
 //$alamat = $_POST[alamat];
 $urlnya = $dbu->lookup('nama','action',"action='21' and id_bahasa='".$_SESSION[bhs]."'");
 
-$query = "SELECT a.website, b.nama as dest, b.slogan, b.alamat, a.pos_lat as lat , a.pos_long as lng, ( 3959 * acos( cos( radians('".$lat."') ) * cos( radians( a.pos_lat ) ) * cos( radians( a.pos_long ) - radians('".$lng."') ) + sin( radians('".$lat."') ) * sin( radians( a.pos_lat ) ) ) ) AS distance, a.thumb, a.icon_map ,LTRIM(' url') as urlc FROM ".$app[table][destinasi]." as a LEFT JOIN ".$app[table][destinasi_bahasa]." as b ON(a.id_reff = b.id_reff) ".$kat." HAVING distance < '".$radius."' ORDER BY distance asc";
+$query = "SELECT distinct a.website, b.nama as dest,a.id_kat, b.slogan, b.alamat, a.pos_lat as lat , a.pos_long as lng, ( 3959 * acos( cos( radians('".$lat."') ) * cos( radians( a.pos_lat ) ) * cos( radians( a.pos_long ) - radians('".$lng."') ) + sin( radians('".$lat."') ) * sin( radians( a.pos_lat ) ) ) ) AS distance, a.thumb, a.icon_map ,LTRIM(' url') as urlc FROM ".$app[table][destinasi]." as a LEFT JOIN ".$app[table][destinasi_bahasa]." as b ON(a.id_reff = b.id_reff) ".$kat." HAVING distance < '".$radius."' ORDER BY distance asc";
 
 $dbu->query($query,$rnear,$hit_near);
 $dnear="";
