@@ -51,9 +51,9 @@ body{position:relative;width:100%;height:100%;line-height:1;margin:0;padding:0;b
 .overlay-body {background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;display: none;position: fixed;top: 0;width: 100%;     z-index: 8;}
 
     .wrapheader{width:100%;height:60px;position:relative; background:#fff; position:fixed; top:0; left:0; z-index:16;-webkit-box-shadow: 2px 2px 3px 0px rgba(50, 50, 50, 0.15);-moz-box-shadow:2px 2px 3px 0px rgba(50, 50, 50, 0.15);box-shadow:2px 2px 3px 0px rgba(50, 50, 50, 0.15);}
-        .header{width:80%;left:12.5%; top:15px; padding:0 2%; height:30px; -webkit-border-radius:20px;border-radius:20px; position:absolute; font-size:12px;}
+        .header{width:78%;left:15%; top:15px; padding:0 2%; height:30px; -webkit-border-radius:20px;border-radius:20px; position:absolute; font-size:12px;}
         .header .search_box{width:73.5%;position:absolute; top:0; left:16px;-webkit-border-radius:20px;border-radius:20px; background:#194c77;height:30px; z-index:11; -webkit-box-shadow: inset -1px 2px 3px 2px rgba(0,0,0,0.12); -moz-box-shadow: inset -1px 2px 3px 2px rgba(0,0,0,0.12); box-shadow: inset -1px 2px 3px 2px rgba(0,0,0,0.12);}
-        .header .search_box input[type='text']{width:92%;position:absolute; top:5px; left:20px; background:none; border:none; color:#fff;}
+        .header .search_box input[type='text']{width:73%;position:absolute; top:5px; left:20px; background:none; border:none; color:#fff;}
         .header .search_box input[type='submit']{width:23px; height:19px; position:absolute; top:5px; right:14px; background:url(images/ic-search.png) no-repeat; border:none;}
         .header .nearby_link{width:11%;position:absolute; top:0; left:77%;-webkit-border-radius:20px;border-radius:20px; background:#0e395d;height:30px; z-index:10; color:#fff; text-align:right; -webkit-box-shadow: inset -1px 2px 3px 2px rgba(0,0,0,0.12); -moz-box-shadow: inset -1px 2px 3px 2px rgba(0,0,0,0.12); box-shadow: inset -1px 2px 3px 2px rgba(0,0,0,0.12);}
         .header .nearby_link:hover{background:#062b4a;}
@@ -62,7 +62,7 @@ body{position:relative;width:100%;height:100%;line-height:1;margin:0;padding:0;b
         .header .login_link:hover{background:#f17100;}
         .header .login_link span{background:url(images/ic-login.png) right -1px no-repeat; padding:2px 23px 5px 0; background-size:15px;position:absolute; top:8px; right:12px;}
 		
-	.burger-menu {display: block;overflow: hidden;margin:0;padding: 0;width: 70px;height: 50px;font-size: 0;text-indent: -9999px;-webkit-appearance: none;   -moz-appearance: none;appearance: none;box-shadow: none;border-radius: none;border: none;cursor: pointer;background:none; z-index:10;position:fixed; top:54px; left:0;background:#fff;}
+	.burger-menu {display: block;overflow: hidden;margin:0;padding: 0;width: 60px;height: 50px;font-size: 0;text-indent: -9999px;-webkit-appearance: none;   -moz-appearance: none;appearance: none;box-shadow: none;border-radius: none;border: none;cursor: pointer;background:none; z-index:20;position:fixed; top:0; left:0;background:#fff;}
 	.burger-menu:focus {outline: none;}
 	.burger-menu span {display: block;position: absolute;top: 27px;left: 18px;right: 18px;height: 3px;background:#194c77;}
 	.burger-menu span::before, .burger-menu span::after {position: absolute;display: block;left: 0;width: 100%;height: 3px;background:#194c77;   content: ""; }
@@ -82,9 +82,9 @@ body{position:relative;width:100%;height:100%;line-height:1;margin:0;padding:0;b
 		
 		
 		
-    .wrapmenu{position:fixed; top:60px; left:0; z-index:9;display:none;padding-top:60px;width:13%;background:#fff;}
+    .wrapmenu{position:fixed; top:60px; left:0; z-index:9;display:none;padding-top:30px;width:13%;background:#fff;}
 		.logo{width:13.5%; height:60px; background:#fff;display:block;text-align:left;}
-		.logo img{left: 15px;position: relative;top: 8px;width: 70%;}
+		.logo img{left: 60px;position: relative;top: 8px;width: 75%;}
 		.mainmenu{width:100%;list-style:none;position:relative;height:100%;overflow-x:scroll;}
 		.mainmenu a{width:84%; padding:10px 8%; display:block;}
 		.mainmenu label {border-bottom: 1px solid #ededed;color: #bdbdbd;display: block;font-size: 13px;margin-bottom: 10px;margin-left: 10%;margin-right: 10%;padding: 20px 0 12px;width:80%;}
@@ -220,7 +220,7 @@ body{position:relative;width:100%;height:100%;line-height:1;margin:0;padding:0;b
 				.big_quotes i {font-style:italic;line-height:30px;}
 				.ic_quo_right {float:right;margin-top:20px;}
 		/*.content_right {width:24%;float:left;background:#e9e9e9;padding:25px 2%;right:0;height:100%;}*/
-		.content_right {width:24%;float:left;background:#e9e9e9;padding:25px 2%;right:0;height:100%;}
+		.content_right {width:24%;float:left;background:#e9e9e9;padding:0 2%;right:0;height:100%;}
 			.gt_prm {background:#1e8a6a url("img/ic-get-promo.png") no-repeat scroll 235px center;width:100%;height:63px;text-align:center;line-height:63px;border-radius:4px;border-bottom:4px solid #004b46;margin-bottom:20px;font-family: "open_sansbold";color:#fff;display:block;position:relative;font-size:20px;}
 			.ad_new_trip {background:#0a9a92;width:100%;height:63px;text-align:center;line-height:63px;border-radius:4px;border-bottom:4px solid #004b46;margin-bottom:20px;font-family: "open_sansbold";color:#fff;display:block;position:relative;font-size:20px;}
 			.box-ck-ot {margin:20px 0;}
@@ -272,7 +272,7 @@ body{position:relative;width:100%;height:100%;line-height:1;margin:0;padding:0;b
 			.newsfeed_section {padding:0;width:72%;padding-top:50px;background:#f2f2f2;}
 				
 					.circle_pict_nf {float:left;margin:0;}
-					.line_newsfeed {width:50%;position:relative;float:left;}
+					.line_newsfeed {width:5.3%;position:relative;float:left;}
 				.box_itm_newsfeed {margin: 0 auto;width:95%;background:url(images/feed_line.png) 22px 0px repeat-y;}
 				.con_newsfeed {margin-bottom: 40px;position: relative;width: 100%;}
 				.ic_cat {height: 45px;position: absolute;right: 2px;top: 65px;width: 45px;}
