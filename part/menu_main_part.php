@@ -27,7 +27,7 @@ $dbu=new db();
 				<li>
 					<a href="<?php echo $app["www"]."/".$dbu->lookup('nama','action',"action='4' and id_bahasa='".$_SESSION[bhs]."'")."/article/";?>">
 						<img src="<?php echo $app["css_www"];?>/img/ic_thread.png"/>
-						<span>Thread</span>
+						<span>Store</span>
 					</a>
 				</li>
 				<li>

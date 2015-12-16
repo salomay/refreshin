@@ -60,7 +60,14 @@ $urlx = new url();
 								<?php echo $feed; ?>
 							</div>
 					</div> <!-- content_left -->
+
+					<div class="content_right thread_section" style="padding-top:20px">
+						<a class="ad_new_trip" href="<?php echo $app[www]."/".$dbu->lookup('nama','action',"action='4' and id_bahasa='".$_SESSION[bhs]."'")."/articles/" ?>">Create Destination</a>
+						<a class="add_plan" href="<?php echo $app[www]."/".$dbu->lookup('nama','action',"action='4' and id_bahasa='".$_SESSION[bhs]."'")."/articles/" ?>">Create News</a>
+					</div>
+
 					<div class="content_right community_section_r">
+
 						<div class="friend_activity" style="margin-top:0;">
 							<h1 class="main_title" style="padding:15px;">FRIEND ACTIVITY<span class="border"></span></h1>
 							<div class="box_list_rate">

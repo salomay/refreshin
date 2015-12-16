@@ -158,6 +158,10 @@ if ($act == 'traveler_friend'){
 					$dbu->query($sql,$rs,$nr);
 					if($nr>0){
 						$ses_id = session_id($uname[id]);
+
+						$_SESSION[member][id]=$uname[id];
+						$_SESSION[member][uname]=$uname[username];
+						$_SESSION[member][ava]=$uname[avatar];
 						$uname=$dbu->fetch($rs);
 						if($_POST[p_cek]=="on"){
 							$cookie_name = "rahasia";
@@ -169,9 +173,8 @@ if ($act == 'traveler_friend'){
 						$sql ="UPDATE ".$app[table][pengguna]." SET terakhir_login = now(), ses_id ='".$ses_id."' WHERE id='".$uname[id]."'";
 						//echo $sql;exit;
 						$dbu->qry($sql);
-						$_SESSION[member][id]=$uname[id];
-						$_SESSION[member][uname]=$uname[username];
-						$_SESSION[member][ava]=$uname[avatar];
+
+						
 						header("location:".$_POST[referer]);
 					}else{
 						$_SESSION[msg]="incorrect username or password ....!!";

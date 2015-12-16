@@ -1,7 +1,9 @@
 <?php 
+session_start();
 $dbu = new db();
 $urlx = new url();
 ?>
+
 <div class="wrapheader">
 			<div class="header">
 				<div class="search_box">
@@ -11,7 +13,7 @@ $urlx = new url();
 				<div id="hasilcari"></div>
 				<a href="<?php echo $app["www"]."/".$dbu->lookup('nama','action',"action='23' and id_bahasa='".$_SESSION[bhs]."'")."/";?>" class="nearby_link"><span>Nearby Place</span></a>
 				<?php
-					if($_SESSION[member]['id']!=""){
+					if($_SESSION[member][id]!=""){
 				?>
 				<div class="circle_pict ava_head">
 					<a href="#"><img src="<?php echo $app[data_www]; ?>/pengguna/avatar/<?php echo $_SESSION[member][ava]; ?>"></a>

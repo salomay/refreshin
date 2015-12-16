@@ -38,7 +38,7 @@ $dbu = new db()?>
 			<div class="login_wrap">
 				<h1>LOGIN<img src="<?php echo $app[css_www]."/";?>img/close.png" class="close" /></h1>
 				<div class="con_login">
-					<form method="post" name="frmLogin" enctype="multipart/form-data" action="<?php echo $app[www]."/login/";?>">
+					<form method="post" name="frmLogin" enctype="multipart/form-data" action="<?php echo $app[http]."/login/";?>">
 					<input type="text" name="p_uname" id="p_uname" placeholder="Username">
 					<input type="password" name="p_pwd" id="p_pwd" placeholder="Password">
 					<input type="checkbox" name="p_cek" id="p_cek"><span>Remember me</span>
